@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class CreateProduct(BaseModel):
@@ -13,3 +13,12 @@ class CreateProduct(BaseModel):
 class CreateCategory(BaseModel):
     name: str
     parent_id: int | None = None
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "name": "String",
+                "parent_id": None,
+            }
+        }
+    )

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from routers import category
-from routers import products
+from app.routers import category
+from app.routers import products
 
 app = FastAPI()
 
