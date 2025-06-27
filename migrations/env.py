@@ -7,6 +7,7 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from app.models.category import Category
 from app.models.products import Product
+from app.models.user import User
 from alembic import context
 from app.backend.db import Base
 import os

@@ -1,6 +1,14 @@
 from pydantic import BaseModel, ConfigDict
 
 
+class CreateUser(BaseModel):
+    first_name: str
+    last_name: str
+    username: str
+    email: str
+    password: str
+
+
 class CreateProduct(BaseModel):
     name: str
     description: str
