@@ -1,6 +1,7 @@
 from app.backend.db import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, Float
 from sqlalchemy.orm import relationship
+from app.models.review import Review
 
 
 class Product(Base):
@@ -18,3 +19,4 @@ class Product(Base):
     category = relationship('Category', back_populates='products',
                             uselist=False)
     supplier_id = Column(Integer, ForeignKey('users.id'), nullable=True)
+    review = relationship('Review')

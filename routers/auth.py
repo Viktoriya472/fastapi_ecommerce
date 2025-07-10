@@ -107,7 +107,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
             'username': username,
             'id': user_id,
             'is_admin': is_admin,
-            'is)supplier': is_supplier,
+            'is_supplier': is_supplier,
             'is_customer': is_customer
         }
     except jwt.ExpiredSignatureError:

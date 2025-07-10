@@ -30,3 +30,9 @@ class CreateCategory(BaseModel):
             }
         }
     )
+
+
+class CreateReview(BaseModel):
+    comment: str
+    product_id: int
+    grade: float
