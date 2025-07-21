@@ -5,12 +5,12 @@ from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
-from app.models.category import Category
-from app.models.products import Product
-from app.models.user import User
-from app.models.review import Review
+from models.category import Category
+from models.products import Product
+from models.user import User
+from models.review import Review
 from alembic import context
-from app.backend.db import Base
+from backend.db import Base
 import os
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

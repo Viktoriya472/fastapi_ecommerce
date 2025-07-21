@@ -3,9 +3,9 @@ from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Annotated
 from passlib.context import CryptContext
-from app.models.user import User
-from app.schemas import CreateUser
-from app.backend.db_depends import get_db
+from models.user import User
+from schemas import CreateUser
+from backend.db_depends import get_db
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from datetime import datetime, timedelta, timezone
 import jwt

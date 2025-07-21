@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import category, products, review, permission, auth
+from routers import category, products, review, permission, auth
 
 
 app = FastAPI()

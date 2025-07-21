@@ -1,13 +1,13 @@
 from fastapi import APIRouter, status, Depends, HTTPException
-from app.backend.db_depends import get_db
+from backend.db_depends import get_db
 from typing import Annotated
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import insert, select
-from app.schemas import CreateProduct
-from app.models.products import Product
-from app.models.category import Category
+from schemas import CreateProduct
+from models.products import Product
+from models.category import Category
 from slugify import slugify
-from app.routers.auth import get_current_user, read_current_user
+from routers.auth import get_current_user, read_current_user
 
 
 router = APIRouter(prefix='/products', tags=['product'])
