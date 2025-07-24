@@ -1,7 +1,7 @@
-from backend.db import Base
+from app.backend.db import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, Float
 from sqlalchemy.orm import relationship
-from models.review import Review
+from app.models.review import Review
 
 
 class Product(Base):

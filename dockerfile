@@ -1,14 +1,20 @@
-FROM python:3.11
+# FROM python:3.11
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONNUNBUFFERED=1
+# ENV HOME=/home/fast \
+#     APP_HOME=/home/fast/app \
+#     PYTHONPATH="$PYTHONPATH:/home/fast" \
+#     PYTHONDONTWRITEBYTECODE=1 \
+#     PYTHONUNBUFFERED=1
 
+# RUN mkdir -p $APP_HOME \
+#     && groupadd -r fast\
+#     && useradd -r -g fast fast
 
-WORKDIR /usr/src/app
+# WORKDIR $HOME
+# COPY . .
+# ADD alembic.ini .
 
-COPY req.txt .
-RUN pip install --upgrade pip && pip install -r req.txt
-COPY . .
+# RUN pip install --upgrade pip && pip install -r app/req.txt && chown -R fast:fast .
+# COPY . .
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port","80"]
-
+# USER fast

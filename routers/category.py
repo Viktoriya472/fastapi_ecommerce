@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import insert, select, update
 from typing import Annotated
-from backend.db_depends import get_db
-from schemas import CreateCategory
-from models.category import Category
+from app.backend.db_depends import get_db
+from app.schemas import CreateCategory
+from app.models.category import Category
 from slugify import slugify
-from routers.auth import get_current_user
+from app.routers.auth import get_current_user
 
 router = APIRouter(prefix='/categories', tags=['category'])
 

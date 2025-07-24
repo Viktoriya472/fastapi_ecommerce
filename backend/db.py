@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-engine = create_async_engine(os.getenv('psql'), echo=True)
+engine = create_async_engine(os.getenv('psql'), echo=False)
 async_session_maker = async_sessionmaker(engine,
                                          expire_on_commit=False,
                                          class_=AsyncSession)
